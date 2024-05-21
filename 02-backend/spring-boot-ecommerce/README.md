@@ -6,9 +6,9 @@
   - MySQL Driver  
   - Lombok  
 
-- Features  
-  - Override Lombok Getter and Setters
-    - Disable PUT, POST, and DELETE in MyDataClassConfig.java  
+## Features  
+- Override Lombok Getter and Setters
+  - Disable PUT, POST, and DELETE in MyDataClassConfig.java  
 ```java
 @Configuration
 public class MyDataClassConfig implements RepositoryRestConfigurer {
@@ -32,3 +32,12 @@ public class MyDataClassConfig implements RepositoryRestConfigurer {
     }
 }
 ```
+
+- CrossOrigin Support  
+```java
+@CrossOrigin({"http://localhost:4200", "http://www.mydoolapp.com"})
+public interface ProductRepository extends JpaRepository<Product, Long> {
+
+}
+```
+
