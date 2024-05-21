@@ -34,6 +34,7 @@ public class MyDataClassConfig implements RepositoryRestConfigurer {
 ```
 
 - CrossOrigin Support  
+  - Know that *Origin* means the same protocol, hostname, and port. 
 ```java
 @CrossOrigin({"http://localhost:4200", "http://www.mydoolapp.com"})
 public interface ProductRepository extends JpaRepository<Product, Long> {
